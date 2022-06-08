@@ -10,10 +10,9 @@ class intro2 extends StatefulWidget {
 }
 
 class _intro2State extends State<intro2> {
-  final stylehead =
-      TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.black);
-  final stylenormal = TextStyle(
-      fontSize: 15, fontWeight: FontWeight.normal, color: Colors.black54);
+
+  final stylehead = TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.black);
+  final stylenormal = TextStyle(fontSize: 15, fontWeight: FontWeight.normal, color: Colors.black54);
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +28,7 @@ class _intro2State extends State<intro2> {
               height: 200,
               child: Lottie.asset(
                 'images/lottie/90454-open-door.json',
-              ),
-            ),
+              ),),
             Text(
               "Connecting the door",
               style: GoogleFonts.prompt(textStyle: stylehead),

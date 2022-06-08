@@ -8,10 +8,7 @@ import 'package:smartdoorapp/screen/pageview/guide2.dart';
 import 'package:smartdoorapp/screen/pageview/guide3.dart';
 import 'package:smartdoorapp/screen/pageview/guide4.dart';
 
-
 class Guidepage extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,46 +17,49 @@ class Guidepage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         elevation: 0,
-        title: Text('Help',style: GoogleFonts.prompt(color: Colors.white),),
+        title: Text(
+          'Help',
+          style: GoogleFonts.prompt(color: Colors.white),
+        ),
         backgroundColor: Color(0xFF5C6BC0),
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(10),
           child: Column(
             children: [
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
             ],
           ),
         ),
         actions: [
           IconButton(
-            icon:Icon(Icons.power_settings_new_rounded),
+            icon: Icon(Icons.power_settings_new_rounded),
             color: Colors.white,
             onPressed: () {
               SystemNavigator.pop();
             },
           )
         ],
-    ),
-      body:
-      ListView(
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
         //padding: const EdgeInsets.all(8),
         children: [
           Container(
             height: 50,
-            decoration:BoxDecoration(color: Colors.white,borderRadius: BorderRadius.only(topLeft: Radius.circular(50),topRight: Radius.circular(0))),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(50),
+                    topRight: Radius.circular(0))),
           ),
           Container(
-            height: 604,
-            color: Colors.white,
-            child: PageView(
-              children: [
-                intro1(),
-                intro2(),
-                intro3(),
-                intro4()
-              ],
-            )
-          ),
+              height: 600,
+              color: Colors.white,
+              child: PageView(
+                children: [intro1(), intro2(), intro3(), intro4()],
+              )),
         ],
       ),
     );
